@@ -1,3 +1,15 @@
+<?php
+// Start the session and include the database connection code
+session_start();
+require_once 'db.php';
+
+// If the user is not logged in, redirect to the login page
+if (!isset($_SESSION['user_id'])) {
+  header('Location: login.php');
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>    
@@ -27,6 +39,7 @@
 		<div class="dashboard-content-wrapper">
 			<div class="row">		
 				<div class="col-xs-12 col-sm-2 col-md-2" id="dashboard-left-content">
+				<h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
 					<div class="dashboard-menu">
 						<ul>
 							<li><i class="bi bi-house"></i><a href="#">Menu</a></li>
@@ -47,7 +60,7 @@
 							<li><i class="bi bi-person-add"></i><a href="#">Menu</a></li>
 							<li><i class="bi bi-database-add"></i><a href="#">Menu</a></li>							
 						</ul>
-						<a href="#"class="log-out"><i class="bi bi-power"></i>LOGOUT</a>
+						<a href="logout.php"class="log-out"><i class="bi bi-power"></i>LOGOUT</a>
 					</div>
 
 				</div>				

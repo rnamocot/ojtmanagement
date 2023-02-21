@@ -1,34 +1,36 @@
 <?php
-if (!isset($_SESSION)) {
-	session_start();
-}
-
-
+// Start the session and include the database connection code
+session_start();
 include_once("./config/ojt_database.php");
 $con = connectionDB();
 
-if (isset($_POST['btn-login'])) {
+// If the user has submitted the login form
+if (isset($_POST['login'])) {
+  // Sanitize the user input
+  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $password = mysqli_real_escape_string($con, $_POST['password']);
 
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$sql = " SELECT * FROM `ojt_users` WHERE ojt_username='$username' AND ojt_password='$password'";
+  // Get the user from the database
+  $sql = " SELECT * FROM `ojt_users` WHERE ojt_username='$username' AND ojt_password='$password'";
+  $result = mysqli_query($conn, $sql);
+  $user = mysqli_fetch_assoc($result);
 
-	$user = $con->query($sql) or die($con->error);
-	$row = $user->fetch_assoc();
-	$total = $user->num_rows;
-
-	if ($total > 0) {
-		$_SESSION['Userlogin'] = $row['username'];
-		$_SESSION['Access'] = $row['access'];
-		echo header("Location:dashboard.php");
-	} else {
-		echo "No user found ";
-	}
+  // Validate the input and check the password
+  if (empty($username) || empty($password)) {
+    $_SESSION['error'] = "Please fill in all fields.";
+  } elseif (!$user) {
+    $_SESSION['error'] = "User not found.";
+  } elseif (!password_verify($password, $user['password'])) {
+    $_SESSION['error'] = "Password incorrect.";
+  } else {
+    // Set the user's session
+    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['username'] = $user['username'];
+    header('Location: index.php');
+    exit;
+  }
 }
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
