@@ -1,9 +1,9 @@
 <?php
 function connectionDB(){  
-    $host="localhost";
+    $host="u992206180_ojt";
     $username="root";
-    $password="";
-    $database="teacher_ojt_system";
+    $password="ojt_management123!";
+    $database="u992206180_ojt_management";
     $con =new mysqli($host, $username,$password, $database );
     if($con->connect_error){
        echo $con->connect_error;
