@@ -45,7 +45,6 @@ if (isset($_POST['btn-login'])) {
 
 	<!-- Custom stylesheet -->
 	<link href="css/style.css" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="./images/toga.png">
 	<!--googlefont-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +62,7 @@ if (isset($_POST['btn-login'])) {
 						<img src="./images/toga.png" id="icon-toga" alt="toga">
 					</div>
 					<h1>Welcome</h1>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					<p>lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6" id="right-content">
 					<div class="signin-heading">
