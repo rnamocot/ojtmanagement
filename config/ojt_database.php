@@ -13,6 +13,7 @@ function connectionDB(){
     }
 }
 */
+
 function connectionDB(){  
     $host="localhost";
     $username="u992206180_ojt";
@@ -24,4 +25,5 @@ function connectionDB(){
     }else{
         return $con;
     }
+    
 }
