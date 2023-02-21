@@ -62,7 +62,7 @@ if (isset($_POST['btn-login'])) {
 						<img src="./images/toga.png" id="icon-toga" alt="toga">
 					</div>
 					<h1>Welcome</h1>
-					<p>lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					<p>You are on your way to becoming excellent educators and mentors for the next generation. As you embark on this journey, we wish you all the best and hope that you gain valuable insights, knowledge, and experience that will help you in your future careers.</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-6" id="right-content">
 					<div class="signin-heading">
