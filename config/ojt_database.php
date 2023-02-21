@@ -1,7 +1,7 @@
 <?php
 function connectionDB(){  
-    $host="u992206180_ojt";
-    $username="root";
+    $host="localhost";
+    $username="u992206180_ojt";
     $password="ojt_management123!";
     $database="u992206180_ojt_management";
     $con =new mysqli($host, $username,$password, $database );
