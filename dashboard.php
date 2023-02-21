@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<!-- Custom stylesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="./images/toga.png">
 	<!--googlefont-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

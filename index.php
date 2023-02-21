@@ -45,6 +45,7 @@ if (isset($_POST['btn-login'])) {
 
 	<!-- Custom stylesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="./images/toga.png">
 	<!--googlefont-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

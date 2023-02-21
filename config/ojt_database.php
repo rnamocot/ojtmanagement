@@ -11,3 +11,17 @@ function connectionDB(){
         return $con;
     }
 }
+
+// Will use this on commit
+// function connectionDB(){  
+//     $host="localhost";
+//     $username="u992206180_ojt";
+//     $password="Ojt_management123!";
+//     $database="u992206180_ojt_management";
+//     $con =new mysqli($host, $username,$password, $database );
+//     if($con->connect_error){
+//        echo $con->connect_error;
+//     }else{
+//         return $con;
+//     }
+// }
